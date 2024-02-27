@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./src/images/Splash Screen.png",
+      "image": "./assets/images/splashscreen.png",
       "resizeMode": "contain"
     },
     "assetBundlePatterns": ["**/*"],
