@@ -116,7 +116,6 @@ const Onboarding1 = () => {
 
 const styles = StyleSheet.create({
   image1: {
-    marginTop: 23,
     marginLeft: 45,
     marginBottom: 86,
     width: 343,
