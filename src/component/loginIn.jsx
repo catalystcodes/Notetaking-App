@@ -9,7 +9,8 @@ import {
   Pressable,
 } from "react-native";
 
-const LoginIn = () => {
+const LoginIn = ({ navigation }) => {
+  const names = {};
   return (
     <SafeAreaView>
       <Image
@@ -19,6 +20,7 @@ const LoginIn = () => {
       <Text style={{ textAlign: "center", fontWeight: "800", fontSize: 32 }}>
         Login
       </Text>
+      <Text>{names.email}</Text>
       <View style={{ marginLeft: 45, marginTop: 60 }}>
         <Text style={{ fontSize: 15, fontWeight: "600" }}>Email</Text>
         <TextInput
@@ -117,7 +119,7 @@ const LoginIn = () => {
         }}
       >
         <Text style={{ fontSize: 14 }}>Don't have account?</Text>
-        <Pressable>
+        <Pressable onPress={() => navigation.navigate("Signup")}>
           <Text
             style={{
               color: "#7D57F1",
@@ -141,11 +143,9 @@ const styles = StyleSheet.create({
     // width: 343,
   },
   inputStyle: {
-    borderBottomColor: "#E0E0E0",
     borderWidth: 2,
-    borderTopColor: "white",
-    borderLeftColor: "white",
-    borderRightColor: "white",
+    borderColor: "transparent",
+    borderBottomColor: "#E0E0E0",
     width: 320,
     fontSize: 14,
   },

@@ -10,7 +10,7 @@ import {
   Pressable,
 } from "react-native";
 
-const SignUp = () => {
+const SignUp = ({ navigation }) => {
   const [isChecked, setChecked] = useState(false);
   return (
     <SafeAreaView>
@@ -64,7 +64,10 @@ const SignUp = () => {
           I agree to the terms of use and Privacy Policy
         </Text>
       </View>
-      <Pressable style={styles.signUp}>
+      <Pressable
+        style={styles.signUp}
+        onPress={() => navigation.navigate("Home")}
+      >
         <Text style={{ color: "white", fontSize: 18, fontWeight: 500 }}>
           Sign Up
         </Text>
@@ -132,7 +135,7 @@ const SignUp = () => {
         }}
       >
         <Text style={{ fontSize: 14 }}>Already have an account?</Text>
-        <Pressable>
+        <Pressable onPress={() => navigation.navigate("Login")}>
           <Text
             style={{
               color: "#7D57F1",
@@ -151,11 +154,9 @@ const SignUp = () => {
 
 const styles = StyleSheet.create({
   inputStyle: {
-    borderBottomColor: "#E0E0E0",
     borderWidth: 2,
-    borderTopColor: "white",
-    borderLeftColor: "white",
-    borderRightColor: "white",
+    borderColor: "transparent",
+    borderBottomColor: "#E0E0E0",
     width: 320,
     fontSize: 14,
   },

@@ -7,23 +7,26 @@ import {
   SafeAreaView,
   Image,
   Pressable,
+  Button,
 } from "react-native";
 
-const Onboarding1 = () => {
+const Onboarding1 = ({ navigation }) => {
   return (
     <SafeAreaView>
       <View>
-        <Text
-          style={{
-            textAlign: "right",
-            fontSize: 14,
-            fontWeight: "500",
-            marginTop: 35,
-            marginRight: 26,
-          }}
-        >
-          SKIP
-        </Text>
+        <Pressable onPress={() => navigation.navigate("Login")}>
+          <Text
+            style={{
+              textAlign: "right",
+              fontSize: 14,
+              fontWeight: "500",
+              marginTop: 35,
+              marginRight: 26,
+            }}
+          >
+            SKIP
+          </Text>
+        </Pressable>
         <Image
           style={styles.image1}
           source={require("../../assets/images/conifer-writer.png")}
@@ -92,23 +95,10 @@ const Onboarding1 = () => {
         where ever and when ever
       </Text>
       <Pressable
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: 100,
-          marginTop: 45,
-          paddingTop: 20,
-          backgroundColor: "#7D57F1",
-        }}
+        style={styles.getStartedButton}
+        onPress={() => navigation.navigate("Onboarding2")}
       >
-        <Text
-          style={{
-            color: "white",
-          }}
-        >
-          Get Started
-        </Text>
+        <Text style={styles.getStartedText}>Get Started</Text>
       </Pressable>
     </SafeAreaView>
   );
@@ -119,6 +109,25 @@ const styles = StyleSheet.create({
     marginLeft: 45,
     marginBottom: 86,
     width: 343,
+  },
+  getStartedButton: {
+    width: 212,
+    height: 56,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 100,
+    marginTop: 45,
+    marginLeft: 110,
+    //   paddingTop: 20,
+    //   paddingBottom: 28,
+
+    backgroundColor: "#7D57F1",
+  },
+  getStartedText: {
+    color: "white",
+    fontSize: 18,
+    fontWeight: 500,
   },
 });
 

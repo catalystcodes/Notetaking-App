@@ -9,7 +9,7 @@ import {
   Pressable,
 } from "react-native";
 
-const Onboarding2 = () => {
+const Onboarding2 = ({ navigation }) => {
   return (
     <SafeAreaView>
       <View>
@@ -106,6 +106,7 @@ const Onboarding2 = () => {
 
           backgroundColor: "#7D57F1",
         }}
+        onPress={() => navigation.navigate("Login")}
       >
         <Text
           style={{
