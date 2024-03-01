@@ -26,7 +26,7 @@ const Onboarding2 = () => {
         </Text>
         <Image
           style={styles.image1}
-          source={require("../../assets/images/conifer-writer.png")}
+          source={require("../../assets/images/conifer-1114 1.png")}
         />
       </View>
       <View

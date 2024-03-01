@@ -1,4 +1,5 @@
-import React from "react";
+import Checkbox from "expo-checkbox";
+import React, { useState } from "react";
 import {
   View,
   StyleSheet,
@@ -9,17 +10,26 @@ import {
   Pressable,
 } from "react-native";
 
-const LoginIn = () => {
+const SignUp = () => {
+  const [isChecked, setChecked] = useState(false);
   return (
     <SafeAreaView>
       <Image
-        style={styles.loginImage}
-        source={require("../../assets/images/loginin.png")}
+        source={require("../../assets/images/signUpImage.png")}
+        style={{ marginBottom: 20, marginLeft: 80 }}
       />
       <Text style={{ textAlign: "center", fontWeight: "800", fontSize: 32 }}>
-        Login
+        Sign Up
       </Text>
-      <View style={{ marginLeft: 45, marginTop: 60 }}>
+      <View style={{ marginLeft: 32, marginTop: 20 }}>
+        <Text style={{ fontSize: 15, fontWeight: "600" }}>Full Name</Text>
+        <TextInput
+          placeholder=""
+          style={styles.inputStyle}
+          keyboardType="email-address"
+        />
+      </View>
+      <View style={{ marginLeft: 31, marginTop: 15, marginBottom: 15 }}>
         <Text style={{ fontSize: 15, fontWeight: "600" }}>Email</Text>
         <TextInput
           placeholder=""
@@ -27,37 +37,42 @@ const LoginIn = () => {
           keyboardType="email-address"
         />
       </View>
-      <View style={{ marginLeft: 45, marginTop: 32 }}>
-        <View style={{ display: "flex", flexDirection: "row" }}>
-          <Text style={{ fontSize: 14, marginRight: 215, fontWeight: "500" }}>
-            Password
-          </Text>
-          <Pressable>
-            <Text style={{ fontSize: 15 }}>Forget?</Text>
-          </Pressable>
-        </View>
-        <TextInput placeholder="" style={styles.inputStyle} />
+      <View style={{ marginLeft: 32 }}>
+        <Text style={{ fontSize: 15, fontWeight: "600" }}>Password</Text>
+        <TextInput
+          placeholder=""
+          style={styles.inputStyle}
+          keyboardType="email-address"
+        />
       </View>
-      <Pressable
+      <View
         style={{
-          width: 212,
-          height: 56,
           display: "flex",
+          flexDirection: "row",
           alignItems: "center",
-          justifyContent: "center",
-          borderRadius: 100,
-          marginTop: 50,
-          marginLeft: 110,
-          backgroundColor: "#7D57F1",
+          marginLeft: 31,
+          marginTop: 15,
         }}
       >
+        <Checkbox
+          style={styles.checkbox}
+          value={isChecked}
+          onValueChange={setChecked}
+          color={isChecked ? "#7D57F1" : undefined}
+        />
+        <Text style={{ fontWeight: "300", fontSize: 12 }}>
+          I agree to the terms of use and Privacy Policy
+        </Text>
+      </View>
+      <Pressable style={styles.signUp}>
         <Text style={{ color: "white", fontSize: 18, fontWeight: 500 }}>
-          Log in
+          Sign Up
         </Text>
       </Pressable>
       <Text
         style={{
           textAlign: "center",
+          color: "#616161",
           marginTop: 13,
           marginBottom: 20,
           fontWeight: "500",
@@ -116,7 +131,7 @@ const LoginIn = () => {
           justifyContent: "center",
         }}
       >
-        <Text style={{ fontSize: 14 }}>Don't have account?</Text>
+        <Text style={{ fontSize: 14 }}>Already have an account?</Text>
         <Pressable>
           <Text
             style={{
@@ -126,7 +141,7 @@ const LoginIn = () => {
               marginLeft: 5,
             }}
           >
-            Create Now
+            Login
           </Text>
         </Pressable>
       </View>
@@ -135,11 +150,6 @@ const LoginIn = () => {
 };
 
 const styles = StyleSheet.create({
-  loginImage: {
-    marginLeft: 45,
-    // marginBottom: 86,
-    // width: 343,
-  },
   inputStyle: {
     borderBottomColor: "#E0E0E0",
     borderWidth: 2,
@@ -149,6 +159,22 @@ const styles = StyleSheet.create({
     width: 320,
     fontSize: 14,
   },
+  checkbox: {
+    width: 16,
+    height: 16,
+    marginRight: 15,
+  },
+  signUp: {
+    width: 212,
+    height: 56,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 100,
+    marginTop: 25,
+    marginLeft: 110,
+    backgroundColor: "#7D57F1",
+  },
 });
 
-export default LoginIn;
+export default SignUp;
