@@ -1,14 +1,14 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 
-const AccountSetting = () => {
+const PersonalData = () => {
   return (
     <View>
-      <Text style={{ textAlign }}>Account Setting</Text>
+      <Text></Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({});
 
-export default AccountSetting;
+export default PersonalData;

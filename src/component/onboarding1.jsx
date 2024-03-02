@@ -21,6 +21,7 @@ const Onboarding1 = ({ navigation }) => {
               fontSize: 14,
               fontWeight: "500",
               marginTop: 35,
+              marginBottom: 45,
               marginRight: 26,
             }}
           >

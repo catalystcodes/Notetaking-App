@@ -1,11 +1,11 @@
 import React from "react";
 import { View, StyleSheet, Text, SafeAreaView } from "react-native";
 
-const Theme = () => {
+const Faq = () => {
   return (
     <SafeAreaView>
       <View>
-        <Text style={{ textAlign: "center" }}>Theme</Text>
+        <Text style={{ textAlign: "center" }} >FAQ</Text>
       </View>
     </SafeAreaView>
   );
@@ -13,4 +13,4 @@ const Theme = () => {
 
 const styles = StyleSheet.create({});
 
-export default Theme;
+export default Faq;

@@ -1,14 +1,14 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 
-const Notification = () => {
+const ChangePassword = () => {
   return (
     <View>
-      <Text style={{ textAlign: "center" }}>Notification</Text>
+      <Text></Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({});
 
-export default Notification;
+export default ChangePassword;
