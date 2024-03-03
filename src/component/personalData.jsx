@@ -1,7 +1,8 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
+// import CollectionIcon from "./icons/CollectionIcon";
+import ArrowRight from "./icons/ArrowRight";
 import PersonalDetails from "./icons/PersonalDetails";
-import Arrowright from "./icons/arrowright";
 
 const PersonalData = () => {
   return (
@@ -9,7 +10,7 @@ const PersonalData = () => {
       <View style={styles.card}>
         <PersonalDetails />
         <Text style={styles.cardDetails}>Personal Data</Text>
-        <Arrowright />
+        <ArrowRight />
       </View>
     </View>
   );

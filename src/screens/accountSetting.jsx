@@ -1,26 +1,23 @@
 import React from "react";
-import { View, StyleSheet, Text, SafeAreaView, Image } from "react-native";
+import { View, StyleSheet, Text, Image } from "react-native";
+
 import PersonalData from "../component/PersonalData";
-import Collections from "../component/collections";
-import ChangePassword from "../component/ChangePassword";
+import Collections from "../component/Collections";
 
 const AccountSetting = () => {
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <Text style={styles.text}>Writon</Text>
-        <View style={styles.avaterRapper}>
-          <Image source={require("../../assets/images/avater.png")} />
-        </View>
-        <View style={styles.nameRapper}>
-          <Text style={styles.avaterName}>Andrea Oladimeji</Text>
-          <Text style={styles.avaterLocation}>Lagos, NG</Text>
-        </View>
-        <PersonalData style={{ backgroundColor: "red" }} />
-        <Collections />
-        <ChangePassword />
+    <View style={styles.container}>
+      <Text style={styles.text}>Writon</Text>
+      <View style={styles.avaterRapper}>
+        <Image source={require("../../assets/images/avater.png")} />
       </View>
-    </SafeAreaView>
+      <View style={styles.nameRapper}>
+        <Text style={styles.avaterName}>Andrea Oladimeji</Text>
+        <Text style={styles.avaterLocation}>Lagos, NG</Text>
+      </View>
+      <PersonalData />
+      <Collections />
+    </View>
   );
 };
 

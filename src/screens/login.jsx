@@ -53,6 +53,7 @@ const Login = ({ navigation }) => {
             backgroundColor: "#7D57F1",
           }}
           onPress={() => {
+            console.log("called login");
             navigation.navigate("Home");
           }}
         >
