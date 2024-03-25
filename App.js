@@ -13,12 +13,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Home1 from "./src/screens/home1";
 import Home2 from "./src/component/home2";
 import Voicenoterec from "./src/component/voicenoterec";
+import NewNote from "./src/component/NewNote";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <Voicenoterec />
+    <NewNote />
 
     // <NavigationContainer>
     //   <SafeAreaView style={styles.safeAreaView}>
