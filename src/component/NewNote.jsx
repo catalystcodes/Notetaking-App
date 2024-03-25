@@ -30,8 +30,10 @@ const NewNote = () => {
       </View>
       <Modal visible={isModalVisible}>
         <View style={styles.saveOption}>
-          <Image source={require("../../assets/images/caution.png")} />
-          <Text>Save Changes ?</Text>
+          <View style={styles.view2}>
+            <Image source={require("../../assets/images/caution.png")} />
+            <Text style={styles.saveStatement}>Save Changes ?</Text>
+          </View>
           <View style={styles.options}>
             <Pressable
               onPress={() => setIsModalVisible(false)}
@@ -58,6 +60,17 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
+  },
+  view2: {
+    marginTop: 41,
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 40,
+  },
+  saveStatement: {
+    marginTop: 25,
+    fontSize: 20,
+    fontWeight: "500",
   },
   addTitle: {
     marginLeft: 20,
@@ -95,6 +108,20 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   discardText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "300",
+  },
+  save: {
+    height: 39,
+    width: 112,
+    backgroundColor: "#7D57F1",
+    borderRadius: 30,
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 32,
+  },
+  saveText: {
     color: "white",
     fontSize: 16,
     fontWeight: "300",
