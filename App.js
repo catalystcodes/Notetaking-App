@@ -10,22 +10,27 @@ import Login from "./src/screens/login";
 import SignUp from "./src/screens/signUp";
 import Home from "./src/screens/home";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Home1 from "./src/screens/home1";
+import Home2 from "./src/component/home2";
+import Voicenoterec from "./src/component/voicenoterec";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <SafeAreaView style={styles.safeAreaView}>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Onboarding1" component={Onboarding1} />
-          <Stack.Screen name="Onboarding2" component={Onboarding2} />
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="Signup" component={SignUp} />
-          <Stack.Screen name="Home" component={Home} />
-        </Stack.Navigator>
-      </SafeAreaView>
-    </NavigationContainer>
+    <Voicenoterec />
+
+    // <NavigationContainer>
+    //   <SafeAreaView style={styles.safeAreaView}>
+    //     <Stack.Navigator screenOptions={{ headerShown: false }}>
+    //       <Stack.Screen name="Onboarding1" component={Onboarding1} />
+    //       <Stack.Screen name="Onboarding2" component={Onboarding2} />
+    //       <Stack.Screen name="Login" component={Login} />
+    //       <Stack.Screen name="Signup" component={SignUp} />
+    //       <Stack.Screen name="Home" component={Home} />
+    //     </Stack.Navigator>
+    //   </SafeAreaView>
+    // </NavigationContainer>
   );
 }
 

@@ -50,7 +50,7 @@ const Onboarding1 = ({ navigation }) => {
         style={{
           textAlign: "center",
           marginTop: 35,
-          fontWeight: 700,
+          fontWeight: "700",
           fontSize: 20,
         }}
       >
@@ -59,7 +59,7 @@ const Onboarding1 = ({ navigation }) => {
       <Text
         style={{
           textAlign: "center",
-          fontWeight: 700,
+          fontWeight: "700",
           fontSize: 20,
         }}
       >
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
   getStartedText: {
     color: "white",
     fontSize: 18,
-    fontWeight: 500,
+    fontWeight: "500",
   },
 });
 

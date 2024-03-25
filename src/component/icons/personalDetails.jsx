@@ -1,13 +1,7 @@
 import * as React from "react";
 import Svg, { Circle, Path } from "react-native-svg";
 const PersonalDetails = (props) => (
-  <Svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={"36px"}
-    height={"36px"}
-    fill="none"
-    {...props}
-  >
+  <Svg width={"36px"} height={"36px"} fill="none" {...props}>
     <Circle cx={18} cy={18} r={18} fill="#7D57F1" />
     <Path
       fill="#fff"

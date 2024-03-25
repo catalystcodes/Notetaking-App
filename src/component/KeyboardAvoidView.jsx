@@ -8,6 +8,11 @@ const KeyboardAvoidView = ({ children }) => {
       enableOnAndroid
       keyboardShouldPersistTaps="handled"
       contentContainerStyle={{ flexGrow: 1 }}
+      scrollToOverflowEnabled={false}
+      extraScrollHeight={0}
+      extraHeight={100}
+      // scrollEnabled={false}
+      enableResetScrollToCoords={false}
     >
       {children}
     </KeyboardAwareScrollView>

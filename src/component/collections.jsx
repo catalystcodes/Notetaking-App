@@ -2,6 +2,10 @@ import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 import ArrowRight from "./icons/ArrowRight";
 import CollectionIcon from "./icons/CollectionIcon";
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from "react-native-responsive-screen";
 
 const Collections = () => {
   return (
@@ -19,16 +23,24 @@ const Collections = () => {
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: 20,
+    marginBottom: 20,
     backgroundColor: "#FCFCFC",
+    borderRadius: 10,
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
   },
   card: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-around",
-    width: 400,
-    padding: 20,
-    borderRadius: 10,
+    width: wp(89.3),
+    paddingVertical: hp(2.5),
+    paddingHorizontal: wp(5.3),
   },
+
   cardDetails: {
     marginRight: 125,
     fontSize: 16,

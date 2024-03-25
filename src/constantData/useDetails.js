@@ -1,6 +1,8 @@
+import PersonalDetails from "./icons/PersonalDetails";
+
 export const menuItems = [
   {
-    icon: require("../../assets/images/accsetting.png"),
+    icon: <PersonalDetails />,
     name: "Account Settings",
   },
   {
@@ -20,6 +22,3 @@ export const menuItems = [
     name: "Theme",
   },
 ];
-
-const height = 812;
-const width = 375;

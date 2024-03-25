@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-around",
     width: 400,
-    padding: 20,
+    padding: 25,
     borderRadius: 10,
   },
   cardDetails: {

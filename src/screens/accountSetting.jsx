@@ -1,8 +1,17 @@
 import React from "react";
-import { View, StyleSheet, Text, Image } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+  SafeAreaView,
+  Pressable,
+} from "react-native";
+import { menuItems } from "../constantData";
 
 import PersonalData from "../component/PersonalData";
 import Collections from "../component/Collections";
+import ChangePassword from "../component/ChangePassword";
 
 const AccountSetting = () => {
   return (
@@ -16,7 +25,23 @@ const AccountSetting = () => {
         <Text style={styles.avaterLocation}>Lagos, NG</Text>
       </View>
       <PersonalData />
-      <Collections />
+      <View>
+        <Collections style={styles.containStyle} />
+      </View>
+      <ChangePassword />
+      <Text style={styles.signOutText}>Sign Out</Text>
+      {/* {menuItems.map((personalItem, itemIndex) => (
+        <Pressable
+          key={itemIndex}
+          style={styles.personalItem}
+         
+        >
+          <Image source={personalItem.icon} />
+          <Text style={{ marginLeft: 20, fontSize: 16, fontWeight: "300" }}>
+            {personalItem.name}
+          </Text>
+        </Pressable>
+      ))} */}
     </View>
   );
 };
@@ -25,10 +50,11 @@ const styles = StyleSheet.create({
   container: {
     paddingLeft: 20,
     paddingRight: 20,
+    paddingTop: 65,
   },
   text: {
     marginTop: 16,
-    marginBottom: 41,
+    marginBottom: 52,
     textAlign: "center",
     fontSize: 20,
     fontWeight: "700",
@@ -48,6 +74,27 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "300",
     marginBottom: 40,
+    marginTop: 15,
+  },
+  containStyle: {
+    backgroundColor: "red",
+  },
+  signOut: {
+    textAlign: "center",
+  },
+  signOutText: {
+    textAlign: "center",
+    marginTop: 70,
+    fontWeight: "700",
+    fontSize: 16,
+    color: "#7D57F1",
+  },
+  personalItem: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 26,
+    marginLeft: 20,
   },
 });
 
