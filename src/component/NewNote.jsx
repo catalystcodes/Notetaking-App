@@ -28,7 +28,7 @@ const NewNote = () => {
           style={styles.addTitle2}
         />
       </View>
-      <Modal visible={isModalVisible}>
+      <Modal visible={isModalVisible} animationType="slide">
         <View style={styles.saveOption}>
           <View style={styles.view2}>
             <Image source={require("../../assets/images/caution.png")} />

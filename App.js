@@ -14,12 +14,14 @@ import Home1 from "./src/screens/home1";
 import Home2 from "./src/component/home2";
 import Voicenoterec from "./src/component/voicenoterec";
 import NewNote from "./src/component/NewNote";
+import RecordList from "./src/component/recordList";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NewNote />
+    // <NewNote />
+    <RecordList />
 
     // <NavigationContainer>
     //   <SafeAreaView style={styles.safeAreaView}>
