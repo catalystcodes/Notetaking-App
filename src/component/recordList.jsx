@@ -1,5 +1,12 @@
 import React from "react";
-import { View, StyleSheet, Image, SafeAreaView, Text } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Image,
+  SafeAreaView,
+  Text,
+  ScrollView,
+} from "react-native";
 import VoiceRecordCard from "./voiceRecordCard";
 
 const RecordList = () => {
@@ -11,15 +18,21 @@ const RecordList = () => {
         <Text style={styles.text1}>
           Clicking the microphone button will start the recording.
         </Text>
-        <VoiceRecordCard />
-        <VoiceRecordCard />
-        <VoiceRecordCard />
-        <VoiceRecordCard />
-        <VoiceRecordCard />
-        <VoiceRecordCard />
-        <VoiceRecordCard />
-        <VoiceRecordCard />
-        <VoiceRecordCard />
+        <ScrollView>
+          <VoiceRecordCard />
+          <VoiceRecordCard />
+          <VoiceRecordCard />
+          <VoiceRecordCard />
+          <VoiceRecordCard />
+          <VoiceRecordCard />
+          <VoiceRecordCard />
+          <VoiceRecordCard />
+          <VoiceRecordCard />
+          <VoiceRecordCard />
+          <VoiceRecordCard />
+          <VoiceRecordCard />
+          <VoiceRecordCard />
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
