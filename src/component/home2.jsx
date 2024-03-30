@@ -11,6 +11,7 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
+import SearchArea from "./searchArea";
 
 const Home2 = () => {
   return (
@@ -28,15 +29,7 @@ const Home2 = () => {
           <Text style={styles.text1}>Hey! Kayla</Text>
           <Text style={styles.text2}>Let’s start making notes</Text>
         </View>
-        <View style={styles.view3}>
-          <Image source={require("../../assets/images/search.png")} />
-          <TextInput
-            placeholder="Search"
-            style={styles.inputStyle}
-            keyboardType="default"
-          />
-          <Image source={require("../../assets/images/microphone copy.png")} />
-        </View>
+        <SearchArea />
         <View>
           <Text style={styles.view4Text}>
             There is nothing here.Create your

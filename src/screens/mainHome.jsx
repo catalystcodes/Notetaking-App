@@ -7,6 +7,7 @@ import {
   TextInput,
   SafeAreaView,
 } from "react-native";
+import SearchArea from "../component/searchArea";
 
 const MainHome = () => {
   return (
@@ -20,41 +21,74 @@ const MainHome = () => {
             style={styles.avatar}
           />
         </View>
-        <View style={styles.view3}>
-          <Image source={require("../../assets/images/search.png")} />
-          <TextInput
-            placeholder="Search"
-            style={styles.inputStyle}
-            keyboardType="default"
-          />
-          <Image source={require("../../assets/images/microphone copy.png")} />
+        <Text style={styles.text1}>Notes</Text>
+        <SearchArea />
+        <View>
+          <View style={styles.view2}>
+            <View>
+              <View style={styles.view3}>
+                <Image source={require("../../assets/images/myNote.png")} />
+                <Text>My Notes</Text>
+              </View>
+            </View>
+
+            <View>
+              <View style={styles.view3}>
+                <Image source={require("../../assets/images/favorites.png")} />
+                <Text>Favorites</Text>
+              </View>
+            </View>
+          </View>
+
+          <View style={styles.view4}>
+            <View>
+              <View style={styles.view3}>
+                <Image source={require("../../assets/images/Categories.png")} />
+                <Text>Categories</Text>
+              </View>
+            </View>
+            <View>
+              <View style={styles.view3}>
+                <Image source={require("../../assets/images/shared.png")} />
+                <Text>Shared</Text>
+              </View>
+            </View>
+          </View>
         </View>
+
+        <Text style={styles.text1}>Recents</Text>
       </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  view1: {
+  view1: {},
+  text1: {
+    fontSize: 16,
+    fontWeight: "600",
+    marginLeft: 20,
+    marginBottom: 14,
+  },
+  view2: {
     flexDirection: "row",
-    alignItems: "center",
-    margin: 20,
-    justifyContent: "space-between",
+    justifyContent: "space-around",
+    marginTop: 20,
   },
   view3: {
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 190,
-    backgroundColor: "#ffff",
     flexDirection: "row",
     alignItems: "center",
-    padding: 10,
+    justifyContent: "center",
+    backgroundColor: "#ffff",
+    width: 170,
+    height: 60,
     borderRadius: 10,
   },
-  inputStyle: {
-    width: 328,
-    marginLeft: 6,
-    marginLeft: 8,
+  view4: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginTop: 10,
+    marginBottom: 30,
   },
 });
 
