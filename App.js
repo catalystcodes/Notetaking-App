@@ -21,6 +21,7 @@ import NewNote from "./src/component/NewNote";
 import RecordList from "./src/component/recordList";
 import MainHome from "./src/screens/mainHome";
 import Notification from "./src/screens/notification";
+import AccountSetting from "./src/screens/accountSetting";
 
 // const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -79,7 +80,6 @@ export default function App() {
         />
       </Tab.Navigator>
     </NavigationContainer>
-    // <Home1 />
   );
 }
 

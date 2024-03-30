@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   View,
   StyleSheet,
@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import SearchArea from "../component/searchArea";
 import Card from "../component/card";
+import { oldNotes } from "../constantData";
 
 const MainHome = () => {
   return (
@@ -79,10 +80,12 @@ const MainHome = () => {
         </View>
         <Text style={styles.text1}>Older</Text>
         <ScrollView>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {oldNotes.map((note, noteIndex) => (
+            <Fragment key={noteIndex}>
+              {/* <Card title={note.title} details={note.details} /> */}
+              <Card {...note} />
+            </Fragment>
+          ))}
         </ScrollView>
       </View>
     </SafeAreaView>
@@ -115,6 +118,10 @@ const styles = StyleSheet.create({
     width: 165,
     height: 60,
     borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 0 },
+    elevation: 4,
+    shadowOpacity: 0.1,
   },
   view4: {
     flexDirection: "row",

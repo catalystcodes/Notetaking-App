@@ -1,16 +1,13 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 
-const Card = () => {
+const Card = ({ title, details }) => {
   return (
     <View style={styles.view1}>
       <View style={styles.view2}></View>
       <View style={styles.view3}>
-        <Text style={styles.text1}>Randoms</Text>
-        <Text>
-          This is some random thoughts, I’m still thinking of what to make of
-          this. Hmm! what should I focus on or....
-        </Text>
+        <Text style={styles.text1}>{title}</Text>
+        <Text>{details}</Text>
       </View>
     </View>
   );
@@ -22,6 +19,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 20,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 5 },
+    elevation: 4,
+    shadowOpacity: 0.2,
   },
   view2: {
     backgroundColor: "#FDC1BA",

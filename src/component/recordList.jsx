@@ -14,7 +14,9 @@ const RecordList = () => {
     <SafeAreaView>
       <View style={styles.container}>
         <Image source={require("../../assets/images/Arrow - Left.png")} />
-        <Image source={require("../../assets/images/bigMic.png")} />
+        <View style={styles.recordSym}>
+          <Image source={require("../../assets/images/bigMic.png")} />
+        </View>
         <Text style={styles.text1}>
           Clicking the microphone button will start the recording.
         </Text>
@@ -48,6 +50,13 @@ const styles = StyleSheet.create({
     marginBottom: 50,
     fontSize: 12,
     textAlign: "center",
+  },
+  recordSym: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 30,
+    marginRight: 20,
   },
 });
 

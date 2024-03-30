@@ -27,10 +27,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     backgroundColor: "#FCFCFC",
     borderRadius: 10,
+
     shadowOffset: {
       width: 0,
       height: 5,
     },
+    shadowColor: "black",
+    elevation: 3,
+    shadowOpacity: 0.2,
   },
   card: {
     flexDirection: "row",
