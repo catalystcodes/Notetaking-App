@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   view3: {
     backgroundColor: "#fff",
     height: 98,
-    width: 380,
+    width: 377,
     paddingLeft: 10,
     paddingRight: 10,
     borderTopRightRadius: 10,

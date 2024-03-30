@@ -90,7 +90,12 @@ const MainHome = () => {
 };
 
 const styles = StyleSheet.create({
-  view1: {},
+  view1: {
+    flexDirection: "row",
+    alignItems: "center",
+    margin: 20,
+    justifyContent: "space-between",
+  },
   text1: {
     fontSize: 16,
     fontWeight: "600",
