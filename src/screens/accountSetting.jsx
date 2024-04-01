@@ -30,18 +30,6 @@ const AccountSetting = () => {
       </View>
       <ChangePassword />
       <Text style={styles.signOutText}>Sign Out</Text>
-      {/* {menuItems.map((personalItem, itemIndex) => (
-        <Pressable
-          key={itemIndex}
-          style={styles.personalItem}
-         
-        >
-          <Image source={personalItem.icon} />
-          <Text style={{ marginLeft: 20, fontSize: 16, fontWeight: "300" }}>
-            {personalItem.name}
-          </Text>
-        </Pressable>
-      ))} */}
     </View>
   );
 };

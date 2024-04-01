@@ -3,7 +3,7 @@ import PersonalDetails from "./icons/PersonalDetails";
 export const menuItems = [
   {
     icon: <PersonalDetails />,
-    name: "Account Settings",
+    name: " Settings",
   },
   {
     icon: require("../../assets/images/notification.png"),

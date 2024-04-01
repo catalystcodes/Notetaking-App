@@ -9,6 +9,10 @@ import {
   Pressable,
 } from "react-native";
 import KeyboardAvoidView from "../component/KeyboardAvoidView";
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from "react-native-responsive-screen";
 
 const Login = ({ navigation }) => {
   return (
@@ -42,8 +46,8 @@ const Login = ({ navigation }) => {
         </View>
         <Pressable
           style={{
-            width: 212,
-            height: 56,
+            width: wp(56.5),
+            height: hp(6.9),
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -54,7 +58,7 @@ const Login = ({ navigation }) => {
           }}
           onPress={() => {
             console.log("called login");
-            navigation.navigate("Home");
+            navigation.navigate("writon screens");
           }}
         >
           <Text style={{ color: "white", fontSize: 18, fontWeight: 500 }}>
@@ -144,14 +148,12 @@ const Login = ({ navigation }) => {
 const styles = StyleSheet.create({
   loginImage: {
     marginLeft: 45,
-    // marginBottom: 86,
-    // width: 343,
   },
   inputStyle: {
     borderWidth: 1,
     borderColor: "transparent",
     borderBottomColor: "#E0E0E0",
-    width: 320,
+    width: wp(85.3),
     fontSize: 14,
     height: 30,
   },

@@ -1,5 +1,9 @@
 import React from "react";
 import { View, StyleSheet, Image, Text } from "react-native";
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from "react-native-responsive-screen";
 
 const VoiceRecordCard = () => {
   return (
@@ -20,16 +24,15 @@ const VoiceRecordCard = () => {
 
 const styles = StyleSheet.create({
   voiceSize: {
-    height: 8,
-    width: 220,
+    height: hp(1),
+    width: wp(52.5),
     borderRadius: 10,
     backgroundColor: "#EFEFEF",
   },
   view0: {
-    height: 74,
-    width: 370,
+    height: hp(9.1),
+    width: wp(89.3),
     flexDirection: "row",
-    // justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#fff",
     borderRadius: 10,

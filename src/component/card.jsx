@@ -1,10 +1,14 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from "react-native-responsive-screen";
 
-const Card = ({ title, details }) => {
+const Card = ({ title, details, decColor }) => {
   return (
     <View style={styles.view1}>
-      <View style={styles.view2}></View>
+      <View style={[styles.view2, { backgroundColor: decColor }]}></View>
       <View style={styles.view3}>
         <Text style={styles.text1}>{title}</Text>
         <Text>{details}</Text>
@@ -21,20 +25,19 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 5 },
-    elevation: 4,
     shadowOpacity: 0.2,
+    elevation: 2,
   },
   view2: {
-    backgroundColor: "#FDC1BA",
-    width: 10,
-    height: 98,
+    width: wp(2.7),
+    height: hp(11.8),
     borderTopLeftRadius: 10,
     borderBottomLeftRadius: 10,
   },
   view3: {
     backgroundColor: "#fff",
-    height: 98,
-    width: 377,
+    width: wp(85.6),
+    height: hp(11.8),
     paddingLeft: 10,
     paddingRight: 10,
     borderTopRightRadius: 10,

@@ -47,7 +47,7 @@ const SignUp = ({ navigation }) => {
               placeholder=""
               secureTextEntry
               style={styles.inputStyle}
-              keyboardType=""
+              keyboardType="visible-password"
             />
           </View>
           <View

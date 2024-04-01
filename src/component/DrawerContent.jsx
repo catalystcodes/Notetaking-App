@@ -26,7 +26,10 @@ const DrawerContent = (props) => {
             }}
           >
             <Pressable
-              style={{ paddingRight: 20 }}
+              style={{
+                paddingRight: 20,
+                paddingVertical: 10,
+              }}
               onPress={() => {
                 navigation.dispatch(DrawerActions.closeDrawer());
               }}
@@ -50,7 +53,14 @@ const DrawerContent = (props) => {
               }}
             >
               <Image source={menuItem.icon} />
-              <Text style={{ marginLeft: 20, fontSize: 16, fontWeight: "300" }}>
+              <Text
+                style={{
+                  marginLeft: 20,
+                  fontSize: 16,
+                  fontWeight: "300",
+                  textTransform: "capitalize",
+                }}
+              >
                 {menuItem.name}
               </Text>
             </Pressable>

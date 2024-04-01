@@ -5,19 +5,33 @@ import {
   Image,
   Text,
   TextInput,
-  SafeAreaView,
   ScrollView,
+  Platform,
+  Pressable,
 } from "react-native";
 import SearchArea from "../component/searchArea";
 import Card from "../component/card";
 import { oldNotes } from "../constantData";
+import { useNavigation } from "@react-navigation/native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from "react-native-responsive-screen";
 
 const MainHome = () => {
+  const navigation = useNavigation();
   return (
-    <SafeAreaView>
-      <View>
+    <SafeAreaView edges={["top", "left", "right"]} style={{ flexGrow: 1 }}>
+      <View style={{ flexGrow: 1 }}>
         <View style={styles.view1}>
-          <Image source={require("../../assets/images/strokes.png")} />
+          <Pressable
+            onPress={() => {
+              navigation.openDrawer();
+            }}
+          >
+            <Image source={require("../../assets/images/strokes.png")} />
+          </Pressable>
           <Text></Text>
           <Image
             source={require("../../assets/images/_avatarM.png")}
@@ -79,14 +93,17 @@ const MainHome = () => {
           </View>
         </View>
         <Text style={styles.text1}>Older</Text>
-        <ScrollView>
-          {oldNotes.map((note, noteIndex) => (
-            <Fragment key={noteIndex}>
-              {/* <Card title={note.title} details={note.details} /> */}
-              <Card {...note} />
-            </Fragment>
-          ))}
-        </ScrollView>
+
+        <View style={{ flex: 1 }}>
+          <ScrollView showsVerticalScrollIndicator={false}>
+            {oldNotes.map((note, noteIndex) => (
+              <Fragment key={noteIndex}>
+                {/* <Card title={note.title} details={note.details} /> */}
+                <Card {...note} />
+              </Fragment>
+            ))}
+          </ScrollView>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -115,8 +132,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#ffff",
-    width: 165,
-    height: 60,
+    width: wp(44),
+    height: hp(7.3),
     borderRadius: 10,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 0 },
@@ -135,25 +152,23 @@ const styles = StyleSheet.create({
     marginLeft: 15,
   },
   view5: {
-    // marginLeft: 20,
     flexDirection: "row",
     justifyContent: "space-between",
     marginBottom: 25,
   },
   view6: {
-    height: 100,
-    width: 185,
+    width: wp(42.6),
+    height: hp(12.3),
     backgroundColor: "#AD9DFF",
     borderRadius: 10,
     marginLeft: 20,
     padding: 10,
   },
   view7: {
-    height: 100,
-    width: 185,
+    width: wp(42.6),
+    height: hp(12.3),
     backgroundColor: "#AD9DFF",
     borderRadius: 10,
-    // marginLeft: 20,
     marginRight: 20,
     padding: 10,
   },

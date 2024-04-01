@@ -1,5 +1,6 @@
 import React from "react";
 import { View, StyleSheet, Image, TextInput } from "react-native";
+import { widthPercentageToDP as wp } from "react-native-responsive-screen";
 
 const SearchArea = () => {
   return (
@@ -27,11 +28,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 10,
     borderRadius: 10,
+    width: wp(89.3),
   },
   inputStyle: {
-    width: 328,
     marginLeft: 6,
     marginLeft: 8,
+    flexGrow: 1,
   },
 });
 
