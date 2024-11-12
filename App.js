@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Button } from "react-native";
+// import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View, Button, StatusBar } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import {
   BottomTabBar,
@@ -32,6 +32,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <SafeAreaProvider>
+      <StatusBar backgroundColor={"black"} />
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Onboarding1" component={AppOnboarding} />

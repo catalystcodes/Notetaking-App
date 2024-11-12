@@ -18,94 +18,101 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
+import KeyboardAvoidView from "../component/KeyboardAvoidView";
 
 const MainHome = () => {
   const navigation = useNavigation();
   return (
-    <SafeAreaView edges={["top", "left", "right"]} style={{ flexGrow: 1 }}>
-      <View style={{ flexGrow: 1 }}>
-        <View style={styles.view1}>
-          <Pressable
-            onPress={() => {
-              navigation.openDrawer();
-            }}
-          >
-            <Image source={require("../../assets/images/strokes.png")} />
-          </Pressable>
-          <Text></Text>
-          <Image
-            source={require("../../assets/images/_avatarM.png")}
-            style={styles.avatar}
-          />
-        </View>
-        <Text style={styles.text1}>Notes</Text>
-        <SearchArea />
-        <View>
-          <View style={styles.view2}>
-            <View>
-              <View style={styles.view3}>
-                <Image source={require("../../assets/images/myNote.png")} />
-                <Text style={styles.text2}>My Notes</Text>
+    <KeyboardAvoidView>
+      <SafeAreaView edges={["top", "left", "right"]} style={{ flexGrow: 1 }}>
+        <View style={{ flexGrow: 1 }}>
+          <View style={styles.view1}>
+            <Pressable
+              onPress={() => {
+                navigation.openDrawer();
+              }}
+            >
+              <Image source={require("../../assets/images/strokes.png")} />
+            </Pressable>
+            <Text></Text>
+            <Image
+              source={require("../../assets/images/_avatarM.png")}
+              style={styles.avatar}
+            />
+          </View>
+          <Text style={styles.text1}>Notes</Text>
+          <SearchArea />
+          <View>
+            <View style={styles.view2}>
+              <View>
+                <View style={styles.view3}>
+                  <Image source={require("../../assets/images/myNote.png")} />
+                  <Text style={styles.text2}>My Notes</Text>
+                </View>
+              </View>
+
+              <View>
+                <View style={styles.view3}>
+                  <Image
+                    source={require("../../assets/images/favorites.png")}
+                  />
+                  <Text style={styles.text2}>Favorites</Text>
+                </View>
               </View>
             </View>
 
-            <View>
-              <View style={styles.view3}>
-                <Image source={require("../../assets/images/favorites.png")} />
-                <Text style={styles.text2}>Favorites</Text>
+            <View style={styles.view4}>
+              <View>
+                <View style={styles.view3}>
+                  <Image
+                    source={require("../../assets/images/Categories.png")}
+                  />
+                  <Text style={styles.text2}>Categories</Text>
+                </View>
+              </View>
+              <View>
+                <View style={styles.view3}>
+                  <Image source={require("../../assets/images/shared.png")} />
+                  <Text style={styles.text2}>Shared</Text>
+                </View>
               </View>
             </View>
           </View>
 
-          <View style={styles.view4}>
-            <View>
-              <View style={styles.view3}>
-                <Image source={require("../../assets/images/Categories.png")} />
-                <Text style={styles.text2}>Categories</Text>
+          <Text style={styles.text1}>Recents</Text>
+          <View style={styles.view5}>
+            <View style={styles.view6}>
+              <View style={styles.view8}>
+                <Text style={styles.text3}>Design Thinking</Text>
+                <Text style={styles.text4}>20/05/2022</Text>
               </View>
+              <Text style={styles.text5}>Design thinking is the</Text>
+              <Text style={styles.text5}>strategic and practical proce...</Text>
             </View>
-            <View>
-              <View style={styles.view3}>
-                <Image source={require("../../assets/images/shared.png")} />
-                <Text style={styles.text2}>Shared</Text>
+            <View style={styles.view7}>
+              <View style={styles.view8}>
+                <Text style={styles.text3}>Zuriboard Training</Text>
+                <Text style={styles.text4}>20/05/2022</Text>
               </View>
+              <Text style={styles.text5}>Introduction to product design</Text>
+              <Text style={styles.text5}>LMS tasks deadline in 4days</Text>
             </View>
           </View>
-        </View>
+          <Text style={styles.text1}>Older</Text>
 
-        <Text style={styles.text1}>Recents</Text>
-        <View style={styles.view5}>
-          <View style={styles.view6}>
-            <View style={styles.view8}>
-              <Text style={styles.text3}>Design Thinking</Text>
-              <Text style={styles.text4}>20/05/2022</Text>
-            </View>
-            <Text style={styles.text5}>Design thinking is the</Text>
-            <Text style={styles.text5}>strategic and practical proce...</Text>
-          </View>
-          <View style={styles.view7}>
-            <View style={styles.view8}>
-              <Text style={styles.text3}>Zuriboard Training</Text>
-              <Text style={styles.text4}>20/05/2022</Text>
-            </View>
-            <Text style={styles.text5}>Introduction to product design</Text>
-            <Text style={styles.text5}>LMS tasks deadline in 4days</Text>
+          <View style={{ flex: 1 }}>
+            <ScrollView showsVerticalScrollIndicator={false}>
+              {oldNotes.map((note, noteIndex) => (
+                <Fragment key={noteIndex}>
+                  {/* <Card title={note.title} details={note.details} /> */}
+                  <Card {...note} />
+                </Fragment>
+              ))}
+            </ScrollView>
           </View>
         </View>
-        <Text style={styles.text1}>Older</Text>
-
-        <View style={{ flex: 1 }}>
-          <ScrollView showsVerticalScrollIndicator={false}>
-            {oldNotes.map((note, noteIndex) => (
-              <Fragment key={noteIndex}>
-                {/* <Card title={note.title} details={note.details} /> */}
-                <Card {...note} />
-              </Fragment>
-            ))}
-          </ScrollView>
-        </View>
-      </View>
-    </SafeAreaView>
+      </SafeAreaView>
+    </KeyboardAvoidView>
   );
 };
 

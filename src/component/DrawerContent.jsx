@@ -43,7 +43,6 @@ const DrawerContent = (props) => {
             <Pressable
               key={itemIndex}
               style={{
-                display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
                 marginBottom: 26,

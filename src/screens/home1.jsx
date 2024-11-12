@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   inputStyle: {
     width: 328,
     marginLeft: 6,
-    marginLeft: 8,
+    // marginLeft: 8,
   },
   view4Text: {
     fontSize: 14,

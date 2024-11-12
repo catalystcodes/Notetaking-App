@@ -53,7 +53,7 @@ const AppOnboarding = () => {
   const navigation = useNavigation();
 
   const handleSkip = () => {
-    navigation.navigate("Login");
+    navigation.replace("Login");
   };
 
   const handleGetStarted = () => {
